@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+
+  "name": "Download by extension",
+  "description": "You can download files to the theme folder: music in the music folder, movies in the movie folder, etc.",
+  "version": "0.1",
+  "background": {"persistent": false, "scripts": ["extension.js"]},
+  "browser_action": {
+    "default_icon": "",
+    "default_popup": "extension.html"
+  }
+}
