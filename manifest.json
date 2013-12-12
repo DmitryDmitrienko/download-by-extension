@@ -6,7 +6,11 @@
   "version": "0.1",
   "background": {"persistent": false, "scripts": ["extension.js"]},
   "browser_action": {
-    "default_icon": "",
+    "default_icon": "icon.png",
     "default_popup": "extension.html"
-  }
+  },
+  "permissions": [
+  "storage",
+  "downloads"
+  ]
 }
