@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>Download extention files</title>
+<script src="option.js"></script>
+</head>
+<body>
+<table id=rules></table>
+<button id=new>Add</button>
+<table hidden>
+<tr id=rule-template hidden>
+  <td class=nowrap><button class=move-up>&uarr;</button>
+    <button class=move-down>&darr;</button></td>
+  <td>
+    <select class=matcher>
+      <option value=torrent>Torrent</option>
+    </select>
+    <input type=text class=match-param>
+    <button class=choice-folder>Folder</button></td>
+    <!--textarea class=action-js rows=5 cols=83>
+      console.log(item.url)
+      console.log(item.filename)
+      // http://developer.chrome.com/extensions/downloads.html#type-DownloadItem
+      // http://developer.chrome.com/extensions/downloads.html#type-FilenameConflictAction
+      suggest('hello.txt', 'overwrite')
+    </textarea-->
+  </td>
+  <td>
+    <span class=nowrap><input type=checkbox class=enabled checked>
+    <label class=enabled-label>Enabled</label></span>
+    <button class=remove>Remove</button>
+  </td>
+</tr>
+</table>
+</body>
+</html>
