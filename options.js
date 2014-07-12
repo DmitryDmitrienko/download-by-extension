@@ -96,6 +96,7 @@ function ListView(model, elements) {
     this.delButtonClicked = new Event(this);
     this.selectOptionsChange = new Event(this);
     this.pathChange = new Event(this);
+    this.saveButtonClicked = new Event(this);
 
     var _this = this;
     this._model.itemAdded.attach(function () {
@@ -110,6 +111,10 @@ function ListView(model, elements) {
     });
     this._elements.addButton.click(function () {
         _this.addButtonClicked.notify();
+    });
+
+    this._elements.saveButton.click(function(){
+        _this.saveButtonClicked.notify();
     });
 
     $("#rules").on('click', this._elements.delButton, function () {
@@ -196,6 +201,10 @@ function ListController(model, view) {
     this._view.pathChange.attach(function (sender, data) {
         _this.updatePath(data.index, data.value);
     });
+
+    this._view.saveButtonClicked.attach(function () {
+        _this.saveData();
+    });
 }
 
 ListController.prototype = {
@@ -222,6 +231,10 @@ ListController.prototype = {
         if (index !== -1) {
             this._model.updatePath(index, value);
         }
+    },
+
+    saveData: function () {
+        this._model.save();
     }
 
 };
@@ -239,7 +252,9 @@ $(document).ready(function () {
             'addButton': $('#add-rule'),
             'delButton': ".del",
             'selectOptions': '.type-file',
-            'pathInput': '.input-dir'
+            'pathInput': '.input-dir',
+            'saveButton': $('save-rule')
+
         });
         var controller = new ListController(model, view);
 
