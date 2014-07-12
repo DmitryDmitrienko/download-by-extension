@@ -31,9 +31,11 @@ chrome.downloads.onDeterminingFilename.addListener(function (item, __suggest) {
         var data = items.DBE_data.data;
         var profile = items.DBE_data.profile;
         var new_file_name = get_new_file_name(data, profile, item.filename);
-        __suggest({filename: new_file_name,
+        __suggest({
+            filename: new_file_name,
             conflict_action: 'overwrite',
-            conflictAction: 'overwrite'});
+            conflictAction: 'overwrite'
+        });
     });
 
     return true;

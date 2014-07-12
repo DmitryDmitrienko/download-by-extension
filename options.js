@@ -24,7 +24,6 @@ Event.prototype = {
 
 function ListModel(items) {
     this._items = items;
-    this._selectedIndex = -1;
     this._listSelect = {
         "empty-type": new TypeFile("", "empty-type", []),
         "doc-type": new TypeFile("Документы", "doc-type", [
@@ -234,15 +233,15 @@ $(document).ready(function () {
         if ('DBE_data' in items) {
             data = items.DBE_data;
         }
-        var model = new ListModel(data);
-        view = new ListView(model, {
+        var model = new ListModel(data.data);
+        var view = new ListView(model, {
             'list': $('#rules'),
             'addButton': $('#add-rule'),
             'delButton': ".del",
             'selectOptions': '.type-file',
             'pathInput': '.input-dir'
         });
-        controller = new ListController(model, view);
+        var controller = new ListController(model, view);
 
         view.show();
     });
