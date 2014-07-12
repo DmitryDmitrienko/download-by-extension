@@ -44,7 +44,6 @@ function ListModel(items) {
 
     this.itemAdded = new Event(this);
     this.itemRemoved = new Event(this);
-    this.selectedIndexChanged = new Event(this);
 }
 
 ListModel.prototype = {

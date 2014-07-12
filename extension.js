@@ -19,7 +19,6 @@ chrome.downloads.onDeterminingFilename.addListener(function (item, __suggest) {
     }
 
     function get_new_file_name(rules, profile, filename) {
-
         for (var i = 0; i < rules.length; i++) {
             if (check_rule(rules[i], profile, filename)) {
                 return rules[i].path + "/" + filename;
