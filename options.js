@@ -29,7 +29,12 @@ function ListModel(items) {
         "doc-type": new TypeFile("Документы", "doc-type", [
             "docx",
             "pdf",
-            "doc"
+            "doc",
+            "txt",
+            "rtf",
+            "odt",
+            "tex",
+            "docm"
         ]),
         "torrent-type": new TypeFile("Torrents", "torrent-type", [
             "torrent"
@@ -38,6 +43,26 @@ function ListModel(items) {
             "jpeg",
             "png",
             "gif",
+        ]),
+        "book-type": new TypeFile("Электронные книги", "book-type", [
+            "djv",
+            "fb2",
+            "fb3",
+            "mobi"
+        ]),
+        "video-type": new TypeFile("Видео", "video-type", [
+            "mkv",
+            "avi",
+            "3gp",
+            "mov",
+            "bik",
+
+        ]),
+        "music-type": new TypeFile("Музыка", "music-type", [
+            "mp3",
+            "aac",
+            "wav"
+
         ])
     };
 
