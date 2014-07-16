@@ -63,6 +63,14 @@ function ListModel(items) {
             "aac",
             "wav"
 
+        ]),
+        "archives": new TypeFile("Архивы", "archives-type",[
+            "zip",
+            "rar",
+            "7z",
+            "gzip",
+            "gz",
+            "tar"
         ])
     };
 
@@ -138,7 +146,7 @@ function ListView(model, elements) {
         _this.addButtonClicked.notify();
     });
 
-    this._elements.saveButton.click(function(){
+    this._elements.saveButton.click(function () {
         _this.saveButtonClicked.notify();
     });
 
