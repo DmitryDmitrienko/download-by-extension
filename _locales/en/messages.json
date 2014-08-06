@@ -1,0 +1,46 @@
+{
+	"picture": {
+		"message": "Picture",
+    "description": "Picture choise"
+	},
+  "ebooks": {
+    "message": "EBooks",
+    "description": "EBooks choise"
+  },
+  "extVideo": {
+    "message": "Video",
+    "description": "Video choise"
+  },
+  "extMusic": {
+    "message": "Music",
+    "description": "Music choise"
+  },
+  "extArchives": {
+    "message": "Archives",
+    "description": "Archives choise"
+  },
+  "extDocument": {
+    "message": "Documents",
+    "description": "Documents"
+  },
+  "extTorrent": {
+    "message": "Torrents",
+    "description": "Torrents"
+  },
+  "extAddRule": {
+    "message": "Add rule",
+    "description": "Add rule"
+  },
+  "extSaveRule": {
+    "message": "Save rules",
+    "description": "Save rule"
+  },
+  "extTypefiles" : {
+    "message": "Type files",
+    "description": "Type files"
+  },
+  "extDirectory": {
+    "message": "Directory",
+    "description": "Directory"
+  }
+}

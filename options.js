@@ -26,7 +26,7 @@ function ListModel(items) {
     this._items = items;
     this._listSelect = {
         "empty-type": new TypeFile("", "empty-type", []),
-        "doc-type": new TypeFile("Документы", "doc-type", [
+        "doc-type": new TypeFile(chrome.i18n.getMessage("extDocument"), "doc-type", [
             "docx",
             "pdf",
             "doc",
@@ -36,21 +36,21 @@ function ListModel(items) {
             "tex",
             "docm"
         ]),
-        "torrent-type": new TypeFile("Torrents", "torrent-type", [
+        "torrent-type": new TypeFile(chrome.i18n.getMessage("extTorrent"), "torrent-type", [
             "torrent"
         ]),
-        "pic-type": new TypeFile("Картинки", "pic-type", [
+        "pic-type": new TypeFile(chrome.i18n.getMessage("picture"), "pic-type", [
             "jpeg",
             "png",
             "gif",
         ]),
-        "book-type": new TypeFile("Электронные книги", "book-type", [
+        "book-type": new TypeFile(chrome.i18n.getMessage("ebooks"), "book-type", [
             "djv",
             "fb2",
             "fb3",
             "mobi"
         ]),
-        "video-type": new TypeFile("Видео", "video-type", [
+        "video-type": new TypeFile(chrome.i18n.getMessage("extVideo"), "video-type", [
             "mkv",
             "avi",
             "3gp",
@@ -58,13 +58,13 @@ function ListModel(items) {
             "bik",
 
         ]),
-        "music-type": new TypeFile("Музыка", "music-type", [
+        "music-type": new TypeFile(chrome.i18n.getMessage("extMusic"), "music-type", [
             "mp3",
             "aac",
             "wav"
 
         ]),
-        "archives": new TypeFile("Архивы", "archives-type",[
+        "archives": new TypeFile(chrome.i18n.getMessage("extArchives"), "archives-type",[
             "zip",
             "rar",
             "7z",
@@ -192,7 +192,7 @@ ListView.prototype = {
             if (items.hasOwnProperty(key)) {
                 var html = "<tr " + 'id="' + key + '">';
                 html += '<td>' + this.createHtmlSelect(items[key].select_index) + '</td>';
-                html += '<td>' + '<input type="text" class="form-control input-dir" value="' + items[key].path + '"> </td>';
+                html += '<td>' + '<input type="text" class="form-control input-dir" name="inputDir" value="' + items[key].path + '"> </td>';
                 html += '<td>' + '<button type="button" class="del btn btn-default"><span class="glyphicon glyphicon-remove"></span></button>' + '</td>';
                 html += '</tr>';
                 list.prepend(html);
@@ -273,7 +273,16 @@ ListController.prototype = {
 };
 
 $(document).ready(function () {
-    var data = [];
+
+    // перевод
+    $("#add-rule").text(chrome.i18n.getMessage("extAddRule"));
+    $("#saveRule").text(chrome.i18n.getMessage("extSaveRule"));
+    $("#table-type").text(chrome.i18n.getMessage("extTypefiles"));
+    $("#table-directory").text(chrome.i18n.getMessage("extDirectory"));
+
+    var data = {
+        'data': []
+    };
     //chrome.storage.sync.remove('DBE_data');
     chrome.storage.sync.get('DBE_data', function (items) {
         if ('DBE_data' in items) {
@@ -286,11 +295,12 @@ $(document).ready(function () {
             'delButton': ".del",
             'selectOptions': '.type-file',
             'pathInput': '.input-dir',
-            'saveButton': $('save-rule')
+            'saveButton': $('#saveRule')
 
         });
         var controller = new ListController(model, view);
 
         view.show();
     });
+
 });

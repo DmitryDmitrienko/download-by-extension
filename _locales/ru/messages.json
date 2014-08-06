@@ -1,0 +1,46 @@
+{
+  "picture": {
+    "message": "Картинки",
+    "description": "Картинки"
+  },
+  "ebooks": {
+    "message": "Электроенные книги",
+    "description": "Электроенные книги"
+  },
+  "extVideo": {
+    "message": "Видео",
+    "description": "Видео"
+  },
+  "extMusic": {
+    "message": "Музыка",
+    "description": "Музыка"
+  },
+  "extArchives": {
+    "message": "Архивы",
+    "description": "Архивы"
+  },
+  "extDocument": {
+    "message": "Документы",
+    "description": "Документы"
+  },
+  "extTorrent": {
+    "message": "Торренты",
+    "description": "Торренты"
+  },
+  "extAddRule": {
+    "message": "Добавить правило",
+    "description": "Добавить правило"
+  },
+  "extSaveRule": {
+    "message": "Сохранить правила",
+    "description": "Сохранить правила"
+  },
+  "extTypefiles" : {
+    "message": "Типы файлов",
+    "description": "Типы файлов"
+  },
+  "extDirectory": {
+    "message": "Директория",
+    "description": "Директория"
+  }
+}
