@@ -16,6 +16,10 @@ $(document).ready(function () {
         }
     });
 
+    // перевод
+    $("#table-type").text(chrome.i18n.getMessage("extTypefiles"));
+    $("#table-directory").text(chrome.i18n.getMessage("extDirectory"));
+
 
 });
 
