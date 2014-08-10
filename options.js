@@ -348,7 +348,7 @@ $(document).ready(function () {
 
         });
         var controller = new ListController(model, view);
-
+        controller.saveData();
         view.show();
     });
 
