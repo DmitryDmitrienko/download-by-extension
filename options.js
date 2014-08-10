@@ -64,7 +64,7 @@ function ListModel(items) {
             "wav"
 
         ]),
-        "archives": new TypeFile(chrome.i18n.getMessage("extArchives"), "archives-type",[
+        "archives-type": new TypeFile(chrome.i18n.getMessage("extArchives"), "archives-type",[
             "zip",
             "rar",
             "7z",
@@ -130,6 +130,7 @@ function ListView(model, elements) {
     this.selectOptionsChange = new Event(this);
     this.pathChange = new Event(this);
     this.saveButtonClicked = new Event(this);
+    this.helpButtonCicked = new Event(this);
 
     var _this = this;
     this._model.itemAdded.attach(function () {
@@ -148,6 +149,10 @@ function ListView(model, elements) {
 
     this._elements.saveButton.click(function () {
         _this.saveButtonClicked.notify();
+    });
+
+    this._elements.helpButton.click(function(){
+        _this.helpButtonCicked.notify();
     });
 
     $("#rules").on('click', this._elements.delButton, function () {
@@ -193,6 +198,7 @@ ListView.prototype = {
                 var html = "<tr " + 'id="' + key + '">';
                 html += '<td>' + this.createHtmlSelect(items[key].select_index) + '</td>';
                 html += '<td>' + '<input type="text" class="form-control input-dir" name="inputDir" value="' + items[key].path + '"> </td>';
+                html += '<td>' + this.createListExtensions(items[key].select_index) + '</td>';
                 html += '<td>' + '<button type="button" class="del btn btn-default"><span class="glyphicon glyphicon-remove"></span></button>' + '</td>';
                 html += '</tr>';
                 list.prepend(html);
@@ -210,6 +216,11 @@ ListView.prototype = {
         }
         html += '</select>';
         return html;
+    },
+
+    createListExtensions: function(typeSelect){
+        var extensions = this._model._listSelect[typeSelect]._ext.join(', ');
+        return extensions;
     }
 };
 
@@ -237,6 +248,10 @@ function ListController(model, view) {
 
     this._view.saveButtonClicked.attach(function () {
         _this.saveData();
+    });
+
+    this._view.helpButtonCicked.attach(function(){
+        $("#modalHelp").modal('show');
     });
 }
 
@@ -279,9 +294,42 @@ $(document).ready(function () {
     $("#saveRule").text(chrome.i18n.getMessage("extSaveRule"));
     $("#table-type").text(chrome.i18n.getMessage("extTypefiles"));
     $("#table-directory").text(chrome.i18n.getMessage("extDirectory"));
+    $("#helpButton text").text(chrome.i18n.getMessage("extHelp"));
+    $(".container h2").text(chrome.i18n.getMessage("extDesc"));
+    $("#myModalLabel").text(chrome.i18n.getMessage("extHelp"));
+    $("#buttonCloseModal").text(chrome.i18n.getMessage("extClose"));
+    $("#helpMessage").text(chrome.i18n.getMessage("extHelpMessage"));
 
     var data = {
-        'data': []
+        'data': [
+        {
+            'select_index': 'doc-type',
+            'path': 'documents'
+        },
+        {
+            'select_index': "torrent-type",
+            'path': 'torrents'
+        },
+        {
+            'select_index': 'pic-type',
+            'path': 'picture'
+        },
+        {
+            'select_index': 'book-type',
+            'path': 'books'
+        },
+        {
+            'select_index': 'video-type',
+            'path': 'video'
+        },
+        {
+            'select_index': 'music-type',
+            'path': 'music'
+        },
+        {
+            'select_index': 'archives-type',
+            'path': 'archives'
+        }]
     };
     //chrome.storage.sync.remove('DBE_data');
     chrome.storage.sync.get('DBE_data', function (items) {
@@ -295,7 +343,8 @@ $(document).ready(function () {
             'delButton': ".del",
             'selectOptions': '.type-file',
             'pathInput': '.input-dir',
-            'saveButton': $('#saveRule')
+            'saveButton': $('#saveRule'),
+            'helpButton': $("#helpButton")
 
         });
         var controller = new ListController(model, view);

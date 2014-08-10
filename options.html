@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="css/bootstarp/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <script src="js/jquery-1.10.2.js"></script>
-    <script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -13,12 +13,16 @@
         <div class="col-md-1"></div>
         <div class="col-md-10">
             <div class="row">
-                <h2>Options Control Download</h2>
+                <h2></h2>
             </div>
             <div class="row">
                 <div class="row">
+                    <p class="bg-info" id="helpMessage"></p>
                     <button id="add-rule" type="button" class="btn btn-primary"></button>
                     <button id="saveRule" type="button" class="btn btn-success"></button>
+                    <button id="helpButton" type="button" class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-question-sign"></span> <text></text>
+                    </button>
                 </div>
                 <div class="row">
                 <form class="form-inline" role="form">
@@ -30,6 +34,7 @@
                             <th id="table-directory">
                                 
                             </th>
+                            <th>Расширения</th>
                             <th></th>
                         </tr>
                         <tbody id="rules">
@@ -42,6 +47,31 @@
         </div>
         <div class="col-md-1"></div>
     </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalHelp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+        <p>Для того чтобы настроить расширение, кликнете правой кнопкой мыши по иконке расширения в web-браузере. В открывшемся меню выберите пункт “Настройки” и Откроется окно настроек.</p>
+
+        <p>Далее необходимо добавить правила. Для этого нужно нажать кнопку “Добавить правило", в таблице правил появится строка с новым правилом. В колонке “Типы файлов" указывается тип файлов, например, документы, картинки, музыка и др. А в колонке “Директория”, путь в проводнике куда сохраняются файлы. Обратите внимание, этот путь указывается относительно папки загрузки браузера</p>
+        <p>(по умолчанию это <strong>C:\Users\user\Downloads)</strong></p> 
+        <p>Если для категории “Музыка” в столбце “Directory” Вы укажите <strong>music</strong>, то реальный путь к данному файлу будет</p> 
+
+        </p><strong>C:\Users\user\Downloads\music</strong></p>  
+        <p>Вы можете делать пути любого уровня вложенности, например, <strong>music\mp3</strong></p>
+
+      </div>
+      <div class="modal-footer">
+        <button id="buttonCloseModal" type="button" class="btn btn-default" data-dismiss="modal"></button>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 <script src="options.js"></script>

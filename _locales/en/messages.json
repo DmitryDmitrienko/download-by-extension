@@ -42,5 +42,21 @@
   "extDirectory": {
     "message": "Directory",
     "description": "Directory"
+  },
+  "extHelp": {
+    "message": "Help",
+    "description": "Help"
+  },
+  "extDesc": {
+    "message": "Options Control Download",
+    "description": "Options Control Download"
+  },
+  "extClose": {
+    "message": "Close",
+    "description": "Close"
+  },
+  "extHelpMessage":{
+    "message": "The path to the folder should not begin with a '/' or '\\'",
+    "description": "The path to the folder should not begin with a '/' or '\\'"
   }
 }

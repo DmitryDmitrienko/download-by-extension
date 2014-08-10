@@ -42,5 +42,21 @@
   "extDirectory": {
     "message": "Директория",
     "description": "Директория"
+  },
+  "extHelp": {
+    "message": "Помощь",
+    "description": "Помощь"
+  },
+  "extDesc": {
+    "message": "Настройки Control Download",
+    "description": "Настройки Control Download"
+  },
+  "extClose": {
+    "message": "Закрыть",
+    "description": "Закрыть"
+  },
+  "extHelpMessage":{
+    "message": "Путь до папки не должен начинаться с символа '/' или '\\'",
+    "description": "Путь до папки не должен начинаться с символа '/' или '\\'"
   }
 }
