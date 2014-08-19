@@ -27,6 +27,10 @@
     "message": "Торренты",
     "description": "Торренты"
   },
+  "extProgramm": {
+    "message": "Программы",
+    "description": "Программы"
+  },
   "extAddRule": {
     "message": "Добавить правило",
     "description": "Добавить правило"

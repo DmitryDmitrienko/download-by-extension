@@ -27,6 +27,10 @@
     "message": "Torrents",
     "description": "Torrents"
   },
+  "extProgramm": {
+    "message": "Programm",
+    "description": "Programm"
+  },
   "extAddRule": {
     "message": "Add rule",
     "description": "Add rule"

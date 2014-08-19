@@ -3,7 +3,7 @@
 
   "name": "Download by extension",
   "description": "You can download files to the theme folder: music in the music folder, movies in the movie folder, etc.",
-  "version": "0.4",
+  "version": "0.5",
   "background": {"persistent": false, "scripts": ["extension.js"]},
   "options_page": "options.html",
   "default_locale": "ru",

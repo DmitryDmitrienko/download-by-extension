@@ -40,6 +40,7 @@ function ListModel(items) {
             "torrent"
         ]),
         "pic-type": new TypeFile(chrome.i18n.getMessage("picture"), "pic-type", [
+            "jpg",
             "jpeg",
             "png",
             "gif",
@@ -71,6 +72,12 @@ function ListModel(items) {
             "gzip",
             "gz",
             "tar"
+        ]),
+        "programm-type": new TypeFile(chrome.i18n.getMessage("extProgramm"), "programm-type",[
+            "exe",
+            "com",
+            "deb",
+            "msi"
         ])
     };
 
@@ -240,6 +247,7 @@ function ListController(model, view) {
 
     this._view.selectOptionsChange.attach(function (sender, data) {
         _this.updateSelect(data.index, data.value);
+        _this._view.rebuildList();
     });
 
     this._view.pathChange.attach(function (sender, data) {
@@ -329,6 +337,10 @@ $(document).ready(function () {
         {
             'select_index': 'archives-type',
             'path': 'archives'
+        },
+        {
+            'select_index': 'programm-type',
+            'path': 'programms'
         }]
     };
     //chrome.storage.sync.remove('DBE_data');
