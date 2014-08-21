@@ -47,6 +47,10 @@
     "message": "Директория",
     "description": "Директория"
   },
+  "extExtension":{
+    "message": "Расширения",
+    "description": "Расширения"
+  },
   "extHelp": {
     "message": "Помощь",
     "description": "Помощь"

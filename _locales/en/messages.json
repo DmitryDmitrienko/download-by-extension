@@ -47,6 +47,10 @@
     "message": "Directory",
     "description": "Directory"
   },
+  "extExtension":{
+    "message": "Extensions",
+    "description": "Directory"
+  },
   "extHelp": {
     "message": "Help",
     "description": "Help"

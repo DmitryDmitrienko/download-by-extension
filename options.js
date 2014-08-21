@@ -307,6 +307,7 @@ $(document).ready(function () {
     $("#myModalLabel").text(chrome.i18n.getMessage("extHelp"));
     $("#buttonCloseModal").text(chrome.i18n.getMessage("extClose"));
     $("#helpMessage").text(chrome.i18n.getMessage("extHelpMessage"));
+    $("#extension").text(chrome.i18n.getMessage("extExtension"));
 
     var data = {
         'data': [
