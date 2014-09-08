@@ -70,5 +70,9 @@
   "extHelpMessage":{
     "message": "The path to the folder should not begin with a '/' or '\\'",
     "description": "The path to the folder should not begin with a '/' or '\\'"
+  },
+  "extAskDeveloper": {
+    "message": "Ask developer or send new extention",
+    "description": "Ask developer or send new extention"
   }
 }

@@ -323,6 +323,7 @@
     $("#buttonCloseModal").text(chrome.i18n.getMessage("extClose"));
     $("#helpMessage").text(chrome.i18n.getMessage("extHelpMessage"));
     $("#extension").text(chrome.i18n.getMessage("extExtension"));
+    $("#mail-to").text(chrome.i18n.getMessage("extAskDeveloper"));
     data = {
       'data': [
         {
