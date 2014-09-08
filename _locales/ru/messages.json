@@ -31,6 +31,10 @@
     "message": "Программы",
     "description": "Программы"
   },
+  "extImage": {
+    "message": "Образы",
+    "description": "Образы"
+  },
   "extAddRule": {
     "message": "Добавить правило",
     "description": "Добавить правило"

@@ -31,6 +31,10 @@
     "message": "Programm",
     "description": "Programm"
   },
+  "extImage": {
+    "message": "Image",
+    "description": "Image"
+  },
   "extAddRule": {
     "message": "Add rule",
     "description": "Add rule"
