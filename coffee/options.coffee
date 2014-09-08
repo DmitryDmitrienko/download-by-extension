@@ -258,20 +258,20 @@ $(document).ready ->
       {'select_index': 'image-type', 'path': 'image'}
     ]
   #chrome.storage.sync.remove 'DBE_data'
-  # chrome.storage.sync.get 'DBE_data', (items)->
-  #   if 'DBE_data' of items
-  #     data = items.DBE_data
-  #     console.log data
-  model = new ListModel data.data
-  elements = 
-    'list': $("#rules")
-    'addButton': $('#add-rule')
-    'delButton': ".del"
-    'selectOptions': '.type-file'
-    'pathInput': '.input-dir'
-    'saveButton': $('#saveRule') 
-    'helpButton': $("#helpButton")
-  view = new ListView model, elements
-  controller = new ListController model, view
-  do controller.saveData
-  do view.show
+  chrome.storage.sync.get 'DBE_data', (items)->
+    if 'DBE_data' of items
+      data = items.DBE_data
+      console.log data
+    model = new ListModel data.data
+    elements = 
+      'list': $("#rules")
+      'addButton': $('#add-rule')
+      'delButton': ".del"
+      'selectOptions': '.type-file'
+      'pathInput': '.input-dir'
+      'saveButton': $('#saveRule') 
+      'helpButton': $("#helpButton")
+    view = new ListView model, elements
+    controller = new ListController model, view
+    do controller.saveData
+    do view.show

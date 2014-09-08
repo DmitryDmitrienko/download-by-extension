@@ -312,7 +312,7 @@
   })();
 
   $(document).ready(function() {
-    var controller, data, elements, model, view;
+    var data;
     $("#add-rule").text(chrome.i18n.getMessage("extAddRule"));
     $("#saveRule").text(chrome.i18n.getMessage("extSaveRule"));
     $("#table-type").text(chrome.i18n.getMessage("extTypefiles"));
@@ -355,20 +355,27 @@
         }
       ]
     };
-    model = new ListModel(data.data);
-    elements = {
-      'list': $("#rules"),
-      'addButton': $('#add-rule'),
-      'delButton': ".del",
-      'selectOptions': '.type-file',
-      'pathInput': '.input-dir',
-      'saveButton': $('#saveRule'),
-      'helpButton': $("#helpButton")
-    };
-    view = new ListView(model, elements);
-    controller = new ListController(model, view);
-    controller.saveData();
-    return view.show();
+    return chrome.storage.sync.get('DBE_data', function(items) {
+      var controller, elements, model, view;
+      if ('DBE_data' in items) {
+        data = items.DBE_data;
+        console.log(data);
+      }
+      model = new ListModel(data.data);
+      elements = {
+        'list': $("#rules"),
+        'addButton': $('#add-rule'),
+        'delButton': ".del",
+        'selectOptions': '.type-file',
+        'pathInput': '.input-dir',
+        'saveButton': $('#saveRule'),
+        'helpButton': $("#helpButton")
+      };
+      view = new ListView(model, elements);
+      controller = new ListController(model, view);
+      controller.saveData();
+      return view.show();
+    });
   });
 
 }).call(this);
