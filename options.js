@@ -206,7 +206,7 @@
       _results = [];
       for (key in items) {
         if (items.hasOwnProperty(key)) {
-          html = "<tr id=" + key + ">\n<td>" + (this.createHtmlSelect(items[key].select_index)) + "</td>\n<td><input type=\"text\" class=\"form-control input-dir\" name=\"inputDir\" value=\"" + items[key].path + "\"> </td>\n<td> " + (this.createListExtensions(items[key].select_index)) + "</td>\n<td>\n<button type=\"button\" class=\"del btn btn-default\">\n<span class=\"glyphicon glyphicon-remove\"></span>\n</button>\n</td>\n</tr>";
+          html = "<tr id=" + key + ">\n<td>" + (this.createHtmlSelect(items[key].select_index)) + "</td>\n<td>\n    <div class=\"form-group float-label-control\">\n      <input type=\"text\" class=\"form-control input-dir label-bottom\" name=\"inputDir\" value=\"" + items[key].path + "\"> \n    </div>\n  </td>\n<td> " + (this.createListExtensions(items[key].select_index)) + "</td>\n<td>\n<button type=\"button\" class=\"del btn btn-default\">\n<span class=\"glyphicon glyphicon-remove\"></span>\n</button>\n</td>\n</tr>";
           _results.push(list.prepend(html));
         } else {
           _results.push(void 0);
@@ -360,7 +360,6 @@
       var controller, elements, model, view;
       if ('DBE_data' in items) {
         data = items.DBE_data;
-        console.log(data);
       }
       model = new ListModel(data.data);
       elements = {
