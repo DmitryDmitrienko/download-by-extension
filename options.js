@@ -50,10 +50,10 @@
         'empty-type': new TypeFile('', 'empty-type', []),
         'doc-type': new TypeFile(chrome.i18n.getMessage("extDocument"), 'doc-type', ["docx", "pdf", "doc", "txt", "rtf", "odt", "tex", "docm", "ppt", "pptx", "xls", "xlsx"]),
         "torrent-type": new TypeFile(chrome.i18n.getMessage("extTorrent"), "torrent-type", ["torrent"]),
-        "pic-type": new TypeFile(chrome.i18n.getMessage("picture"), "pic-type", ["jpg", "jpeg", "png", "gif"]),
-        "book-type": new TypeFile(chrome.i18n.getMessage("ebooks"), "book-type", ["djv", "fb2", "fb3", "mobi"]),
-        "video-type": new TypeFile(chrome.i18n.getMessage("extVideo"), "video-type", ["mkv", "avi", "3gp", "mov", "bik"]),
-        "music-type": new TypeFile(chrome.i18n.getMessage("extMusic"), "music-type", ["mp3", "aac", "wav"]),
+        "pic-type": new TypeFile(chrome.i18n.getMessage("picture"), "pic-type", ["jpg", "jpeg", "png", "gif", "tiff"]),
+        "book-type": new TypeFile(chrome.i18n.getMessage("ebooks"), "book-type", ["djvu", "fb2", "fb3", "mobi"]),
+        "video-type": new TypeFile(chrome.i18n.getMessage("extVideo"), "video-type", ["mkv", "avi", "3gp", "mov", "bik", "wmv", "flv", "swf", "m2v", "m2p", "vob", "ifo"]),
+        "music-type": new TypeFile(chrome.i18n.getMessage("extMusic"), "music-type", ["mp3", "aac", "wav", "ogg", "flac", "wma"]),
         "archives-type": new TypeFile(chrome.i18n.getMessage("extArchives"), "archives-type", ["zip", "rar", "7z", "gzip", "gz", "tar"]),
         "programm-type": new TypeFile(chrome.i18n.getMessage("extProgramm"), "programm-type", ["exe", "com", "deb", "msi", "dmg"]),
         "image-type": new TypeFile(chrome.i18n.getMessage("extImage"), "image-type", ["iso", "adf", "cso", "md0", "md1", "md2", "mdf"])
@@ -206,7 +206,7 @@
       _results = [];
       for (key in items) {
         if (items.hasOwnProperty(key)) {
-          html = "<tr id=" + key + ">\n<td>" + (this.createHtmlSelect(items[key].select_index)) + "</td>\n<td><input type=\"text\" class=\"form-control input-dir\" name=\"inputDir\" value=\"" + items[key].path + "\"> </td>\n<td> " + (this.createListExtensions(items[key].select_index)) + "</td>\n<td>\n<button type=\"button\" class=\"del btn btn-default\">\n<span class=\"glyphicon glyphicon-remove\"></span>\n</button>\n</td>\n</tr>";
+          html = "<tr id=" + key + ">\n<td>" + (this.createHtmlSelect(items[key].select_index)) + "</td>\n<td>\n    <div class=\"form-group float-label-control\">\n      <input type=\"text\" class=\"form-control input-dir label-bottom\" name=\"inputDir\" value=\"" + items[key].path + "\"> \n    </div>\n  </td>\n<td> " + (this.createListExtensions(items[key].select_index)) + "</td>\n<td>\n<button type=\"button\" class=\"del btn btn-default\">\n<span class=\"glyphicon glyphicon-remove\"></span>\n</button>\n</td>\n</tr>";
           _results.push(list.prepend(html));
         } else {
           _results.push(void 0);
@@ -324,6 +324,7 @@
     $("#helpMessage").text(chrome.i18n.getMessage("extHelpMessage"));
     $("#extension").text(chrome.i18n.getMessage("extExtension"));
     $("#mail-to").text(chrome.i18n.getMessage("extAskDeveloper"));
+    $("#modalBody").text(chrome.i18n.getMessage("helpModal"));
     data = {
       'data': [
         {
@@ -360,7 +361,6 @@
       var controller, elements, model, view;
       if ('DBE_data' in items) {
         data = items.DBE_data;
-        console.log(data);
       }
       model = new ListModel(data.data);
       elements = {

@@ -19,7 +19,7 @@ Authors:
       _ref = types.ext;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         t = _ref[_i];
-        if (filename.indexOf(t) > -1) {
+        if (filename.indexOf(t) > -1 || filename.toUpperCase().indexOf(t.toUpperCase()) > -1) {
           return true;
         }
       }

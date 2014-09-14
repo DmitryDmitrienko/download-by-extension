@@ -33,9 +33,10 @@ class ListModel
             "jpeg",
             "png",
             "gif",
+            "tiff"
         ]
       "book-type": new TypeFile chrome.i18n.getMessage("ebooks"), "book-type", [
-            "djv",
+            "djvu",
             "fb2",
             "fb3",
             "mobi"
@@ -46,13 +47,21 @@ class ListModel
           "3gp",
           "mov",
           "bik",
-
+          "wmv",
+          "flv",
+          "swf",
+          "m2v",
+          "m2p",
+          "vob",
+          "ifo"
       ]
       "music-type": new TypeFile chrome.i18n.getMessage("extMusic"), "music-type", [
           "mp3",
           "aac",
-          "wav"
-
+          "wav",
+          "ogg",
+          "flac",
+          "wma"
       ]
       "archives-type": new TypeFile chrome.i18n.getMessage("extArchives"), "archives-type",[
           "zip",
@@ -168,7 +177,11 @@ class ListView
         html = """
         <tr id=#{key}>
         <td>#{@createHtmlSelect(items[key].select_index)}</td>
-        <td><input type="text" class="form-control input-dir" name="inputDir" value="#{items[key].path}"> </td>
+        <td>
+            <div class="form-group float-label-control">
+              <input type="text" class="form-control input-dir label-bottom" name="inputDir" value="#{items[key].path}"> 
+            </div>
+          </td>
         <td> #{@createListExtensions(items[key].select_index)}</td>
         <td>
         <button type="button" class="del btn btn-default">
@@ -244,6 +257,7 @@ $(document).ready ->
   $("#helpMessage").text chrome.i18n.getMessage("extHelpMessage")
   $("#extension").text chrome.i18n.getMessage("extExtension")
   $("#mail-to").text chrome.i18n.getMessage("extAskDeveloper")
+  $("#modalBody").text chrome.i18n.getMessage("helpModal")
 
 
   data = 
@@ -262,7 +276,6 @@ $(document).ready ->
   chrome.storage.sync.get 'DBE_data', (items)->
     if 'DBE_data' of items
       data = items.DBE_data
-      console.log data
     model = new ListModel data.data
     elements = 
       'list': $("#rules")

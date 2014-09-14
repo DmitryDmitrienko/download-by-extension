@@ -12,7 +12,7 @@ chrome.downloads.onDeterminingFilename.addListener (item, __suggest) ->
   check_rule = (rule, profile, filename) ->
     types = profile[rule.select_index]
     for t in types.ext
-      if filename.indexOf(t) > -1 
+      if filename.indexOf(t) > -1 or filename.toUpperCase().indexOf(t.toUpperCase()) > -1 
         return true
     false
   
@@ -31,5 +31,5 @@ chrome.downloads.onDeterminingFilename.addListener (item, __suggest) ->
         filename: new_file_name,
         conflict_action: 'overwrite',
         conflictAction: 'overwrite'
-    
+  
   true
