@@ -60,19 +60,39 @@
     "description": "Help"
   },
   "extDesc": {
-    "message": "Options Control Download",
-    "description": "Options Control Download"
+    "message": "Control Download settings",
+    "description": "Control Download settings"
   },
   "extClose": {
     "message": "Close",
     "description": "Close"
   },
   "extHelpMessage":{
-    "message": "The path to the folder should not begin with a '/' or '\\'",
-    "description": "The path to the folder should not begin with a '/' or '\\'"
+    "message": "The path to the folder can't start with '/' or '\\'",
+    "description": "The path to the folder can't start with '/' or '\\'"
   },
   "extAskDeveloper": {
-    "message": "Ask developer or send new extention",
-    "description": "Ask developer or send new extention"
+    "message": "Ask developer a question or send a new extension",
+    "description": "Ask developer a question or send a new extension"
+  },
+  "helpModal": {
+    "message" :"
+        To configure the extension, right-click the extension icon in your web-browser. In the context menu, choose \"Settings\", the Settings dialog will appear.
+        Then, you should add rules. To do so, click the \"Add rule\" button, a row with a new rule will be added to the rule table. In the \"File types\" column you specify file types, for example, documents, images, music, etc. In the “Directory” column you specify the path to save files. Please note that this path is specified with respect to the browser's download folder
+        (by default, it is <strong>C:\\Users\\user\\Downloads)
+        If you specify the path music for the “Music” category in the \"Directory\" column, the real path to this file will be
+
+        C:\\Users\\user\\Downloads\\music
+        You can specify paths with any nesting level, for example, music\\mp3
+    ",
+    "description" :"
+        To configure the extension, right-click the extension icon in your web-browser. In the context menu, choose \"Settings\", the Settings dialog will appear.
+        Then, you should add rules. To do so, click the \"Add rule\" button, a row with a new rule will be added to the rule table. In the \"File types\" column you specify file types, for example, documents, images, music, etc. In the “Directory” column you specify the path to save files. Please note that this path is specified with respect to the browser's download folder
+        (by default, it is <strong>C:\\Users\\user\\Downloads)
+        If you specify the path music for the “Music” category in the \"Directory\" column, the real path to this file will be
+
+        C:\\Users\\user\\Downloads\\music
+        You can specify paths with any nesting level, for example, music\\mp3
+    "
   }
 }

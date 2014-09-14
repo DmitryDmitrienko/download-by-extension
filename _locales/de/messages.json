@@ -1,0 +1,100 @@
+{
+	"picture": {
+		"message": "Bilder",
+    "description": "Bilder"
+	},
+  "ebooks": {
+    "message": "E-Bücher",
+    "description": "E-Bücher"
+  },
+  "extVideo": {
+    "message": "Videos",
+    "description": "Videos"
+  },
+  "extMusic": {
+    "message": "Musik",
+    "description": "Musik"
+  },
+  "extArchives": {
+    "message": "Archiv",
+    "description": "Archiv"
+  },
+  "extDocument": {
+    "message": "Dokumentation",
+    "description": "Dokumentation"
+  },
+  "extTorrent": {
+    "message": "Torrents",
+    "description": "Torrents"
+  },
+  "extProgramm": {
+    "message": "Programme",
+    "description": "Programme"
+  },
+  "extImage": {
+    "message": "Ebenbilder/Image",
+    "description": "Ebenbilder/Image"
+  },
+  "extAddRule": {
+    "message": "Regeln hinzufügen",
+    "description": "Regeln hinzufügen"
+  },
+  "extSaveRule": {
+    "message": "Regeln speichern",
+    "description": "Regeln speichern"
+  },
+  "extTypefiles" : {
+    "message": "Dateitypen",
+    "description": "Dateitypen"
+  },
+  "extDirectory": {
+    "message": "Verzeichnis",
+    "description": "Verzeichnis"
+  },
+  "extExtension":{
+    "message": "Extensions",
+    "description": "Erweiterungen"
+  },
+  "extHelp": {
+    "message": "Hilfe",
+    "description": "Hilfe"
+  },
+  "extDesc": {
+    "message": "Einstellungen für Control Download",
+    "description": "Einstellungen für Control Download"
+  },
+  "extClose": {
+    "message": "Schließen",
+    "description": "Schließen"
+  },
+  "extHelpMessage":{
+    "message": "Verzeichnis sollen   mit  '/' oder '\\' nicht anfangen",
+    "description": "Verzeichnis sollen   mit  '/' oder '\\' nicht anfangen"
+  },
+  "extAskDeveloper": {
+    "message": "Bitten Sie den Entwickler oder verwenden Sie eine neue Erweiterung",
+    "description": "Bitten Sie den Entwickler oder verwenden Sie eine neue Erweiterung"
+  },
+  "helpModal": {
+    "message": "
+      Um Erweiterung zu konfigurieren, klicken Sie mit der rechten Maustaste auf Icon aus  Erweiterung in Web-Browser. 
+        Im Menü wählen Sie \"Einstellungen\" und das Fenster öffnet.
+
+        Als nächstes hinzufügen Sie die Regel. Um dies zu tun, klicken Sie auf  \"Regel hinzufügen\", 
+        im Tischregeln Leiste erscheint mit der neuen Regel. In der Spalte \"Dateitypen\" gibt es Typen aus Datei, zum Beispiel, 
+        Dokumente, Bilder, Musik und andere. Und im \"Verzeichnis\" ist der Leiterbahn, wo Dateien gespeichert sind. 
+        Beachten Sie, dass dieser Weg ist in Bezug auf den Download-Ordner  tut (C:\\Users\\user\\Downloads) Der Standardwert ist
+        Wenn die Kategorie ist \"Musik\" in \"Verzeichnis\" wählen Sie Musik , der wahre Verzeichnis werden. Sie können Verzeichnis aus jeder Stufe zu nehmen, zum Beispiel
+    ",
+    "description": "
+        Um Erweiterung zu konfigurieren, klicken Sie mit der rechten Maustaste auf Icon aus  Erweiterung in Web-Browser. 
+        Im Menü wählen Sie \"Einstellungen\" und das Fenster öffnet.
+
+        Als nächstes hinzufügen Sie die Regel. Um dies zu tun, klicken Sie auf  \"Regel hinzufügen\", 
+        im Tischregeln Leiste erscheint mit der neuen Regel. In der Spalte \"Dateitypen\" gibt es Typen aus Datei, zum Beispiel, 
+        Dokumente, Bilder, Musik und andere. Und im \"Verzeichnis\" ist der Leiterbahn, wo Dateien gespeichert sind. 
+        Beachten Sie, dass dieser Weg ist in Bezug auf den Download-Ordner  tut (C:\\Users\\user\\Downloads) Der Standardwert ist
+        Wenn die Kategorie ist \"Musik\" in \"Verzeichnis\" wählen Sie Musik , der wahre Verzeichnis werden. Sie können Verzeichnis aus jeder Stufe zu nehmen, zum Beispiel
+    "
+  }
+}

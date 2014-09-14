@@ -33,9 +33,10 @@ class ListModel
             "jpeg",
             "png",
             "gif",
+            "tiff"
         ]
       "book-type": new TypeFile chrome.i18n.getMessage("ebooks"), "book-type", [
-            "djv",
+            "djvu",
             "fb2",
             "fb3",
             "mobi"
@@ -46,13 +47,21 @@ class ListModel
           "3gp",
           "mov",
           "bik",
-
+          "wmv",
+          "flv",
+          "swf",
+          "m2v",
+          "m2p",
+          "vob",
+          "ifo"
       ]
       "music-type": new TypeFile chrome.i18n.getMessage("extMusic"), "music-type", [
           "mp3",
           "aac",
-          "wav"
-
+          "wav",
+          "ogg",
+          "flac",
+          "wma"
       ]
       "archives-type": new TypeFile chrome.i18n.getMessage("extArchives"), "archives-type",[
           "zip",
@@ -248,6 +257,7 @@ $(document).ready ->
   $("#helpMessage").text chrome.i18n.getMessage("extHelpMessage")
   $("#extension").text chrome.i18n.getMessage("extExtension")
   $("#mail-to").text chrome.i18n.getMessage("extAskDeveloper")
+  $("#modalBody").text chrome.i18n.getMessage("helpModal")
 
 
   data = 
