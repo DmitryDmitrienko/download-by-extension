@@ -3,17 +3,17 @@
 
   "name": "Download by extension",
   "description": "You can download files to the theme folder: music in the music folder, movies in the movie folder, etc.",
-  "version": "0.6",
-  "background": {"persistent": false, "scripts": ["extension.js"]},
+  "version": "0.7",
+  "background": {"persistent": false, "scripts": ["js/extension.js"]},
   "options_page": "options.html",
   "default_locale": "ru",
   "icons": {
-    "16": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png"
+    "16": "img/icon.png",
+    "48": "img/icon.png",
+    "128": "img/icon.png"
   },
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "img/icon.png",
     "default_popup": "popup.html"
   },
   "permissions": [

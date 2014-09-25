@@ -1,0 +1,24 @@
+{
+  "name": "download-by-extension",
+  "dependencies": {
+    "jquery": "2.1.1",
+    "bootstrap": "latest"
+  },
+  "version": "0.7",
+  "homepage": "https://github.com/DmitryDmitrienko/download-by-extension",
+  "authors": [
+    "Dmitry Dmitrienko <dmitry.dmitrienko@outlook.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ]
+}

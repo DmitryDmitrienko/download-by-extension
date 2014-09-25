@@ -223,6 +223,7 @@ class ListController
     @view.saveButtonClicked.attach =>
       do @saveData
     @view.helpButtonCicked.attach =>
+      chrome.send('openDownloadsFolder');
       $("#modalHelp").modal 'show'
 
   addItem:-> @model.addItem('empty-type')
