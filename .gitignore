@@ -12,3 +12,5 @@ options.js
 popup.js
 
 lib
+
+node_modules
