@@ -87,6 +87,7 @@ class ListModel
           "md2",
           "mdf"
       ]
+      'other-type': new TypeFile chrome.i18n.getMessage("extOther"), 'other-type', []
   
   getItems: -> [].concat @items 
   addItem: (item)->
@@ -223,7 +224,6 @@ class ListController
     @view.saveButtonClicked.attach =>
       do @saveData
     @view.helpButtonCicked.attach =>
-      chrome.send('openDownloadsFolder');
       $("#modalHelp").modal 'show'
 
   addItem:-> @model.addItem('empty-type')
@@ -271,7 +271,8 @@ $(document).ready ->
       {'select_index': 'music-type', 'path': 'music'}
       {'select_index': 'archives-type', 'path': 'archives'}
       {'select_index': 'programm-type', 'path': 'programms'}
-      {'select_index': 'image-type', 'path': 'image'}
+      {'select_index': 'image-type', 'path': 'image'},
+      {'select_index': 'other-type', 'path': 'other'},
     ]
   #chrome.storage.sync.remove 'DBE_data'
   chrome.storage.sync.get 'DBE_data', (items)->

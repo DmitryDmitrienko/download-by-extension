@@ -35,7 +35,7 @@ module.exports = function(grunt){
       }
     },
     zip: {
-      'download-by-extension.zip': [
+      '../download-by-extension.zip': [
                     'manifest.json', 
                     'LICENSE',
                     'options.html',
@@ -66,4 +66,5 @@ module.exports = function(grunt){
 
   grunt.registerTask('process', ['newer:coffee', 'uglify']);
   grunt.registerTask('default', ['coffee', 'uglify', 'watch']);
+  grunt.registerTask('upload', ['coffee', 'uglify', 'zip']);
 };
