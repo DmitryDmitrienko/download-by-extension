@@ -19,7 +19,7 @@ module.exports = function(grunt){
       },
       scripts: {
         files: ['coffee/*.coffee'],
-        tasks: ['newer:coffee']
+        tasks: ['process']
       }
     },
     uglify: {
@@ -41,4 +41,7 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-zip');
   grunt.loadNpmTasks('grunt-newer');
+
+  grunt.registerTask('process', ['newer:coffee', 'uglify']);
+  grunt.registerTask('default', ['coffee', 'uglify', 'watch']);
 };
