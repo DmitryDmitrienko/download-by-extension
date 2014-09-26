@@ -33,6 +33,28 @@ module.exports = function(grunt){
           'js/popup.min.js': ['js/popup.js']
         }
       }
+    },
+    zip: {
+      'download-by-extension.zip': [
+                    'manifest.json', 
+                    'LICENSE',
+                    'options.html',
+                    'popup.html',
+                    'lib/bootstrap/dist/css/bootstrap.min.css',
+                    'lib/bootstrap/dist/js/bootstrap.min.js',
+                    'lib/bootstrap/dist/fonts/*',
+                    'js/extension.min.js',
+                    'js/options.min.js',
+                    'js/popup.min.js',
+                    'js/input.js',
+                    'img/icon.png',
+                    'css/input.css',
+                    'css/style.css',
+                    '_locales/de/*',
+                    '_locales/en/*',
+                    '_locales/ru/*',
+                    'lib/jquery/dist/jquery.min.js'
+                  ],
     }
   });
   grunt.loadNpmTasks('grunt-contrib-coffee');
