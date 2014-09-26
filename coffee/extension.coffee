@@ -4,7 +4,7 @@ Use of this source code is governed by a BSD-style license that can be
 found in the LICENSE file.
 Authors: 
  Anton Sinitsyn <sinicin2008@gmail.com>
- Dmitry Dmitrienko <dmitry.dmitrienko@outlook.com>
+ Dmitry chexov Dmitrienko <dmitry.dmitrienko@outlook.com>
  Nickolai Rashevsky <rashevsky.n@gmail.com>
 ###
 

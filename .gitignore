@@ -14,3 +14,8 @@ popup.js
 lib
 
 node_modules
+js/popup.min.js
+
+js/options.min.js
+
+js/extension.min.js
