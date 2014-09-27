@@ -1,6 +1,6 @@
 {
   "name": "download-by-extension",
-  "version": "1.0.0",
+  "version": "0.7.1",
   "description": "You can download files to the theme folder: music in the music folder, movies in the movie folder, etc.",
   "main": "lib/options.js",
   "dependencies": {
