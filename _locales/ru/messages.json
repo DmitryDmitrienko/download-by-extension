@@ -51,6 +51,10 @@
     "message": "Директория",
     "description": "Директория"
   },
+  "extOther": {
+    "message": "Другие",
+    "description": "Другие"
+  },
   "extExtension":{
     "message": "Расширения",
     "description": "Расширения"

@@ -18,9 +18,17 @@ chrome.downloads.onDeterminingFilename.addListener (item, __suggest) ->
   
 
   get_new_file_name = (rules, profile, filename) ->
-    for rule in rules
+    otherPath = null
+    find = false
+    for rule in rules 
+      if rule.select_index == 'other-type'
+          otherPath = rule.path
       if check_rule rule, profile, filename 
         filename = "#{rule.path}/#{filename}"
+        find = true
+        break
+    if !find and otherPath!=null
+      filename = "#{otherPath}/#{filename}"
     return filename
 
   chrome.storage.sync.get 'DBE_data', (items) ->

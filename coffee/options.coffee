@@ -53,7 +53,8 @@ class ListModel
           "m2v",
           "m2p",
           "vob",
-          "ifo"
+          "ifo",
+          "mp4"
       ]
       "music-type": new TypeFile chrome.i18n.getMessage("extMusic"), "music-type", [
           "mp3",

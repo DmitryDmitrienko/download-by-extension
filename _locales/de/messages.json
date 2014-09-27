@@ -51,6 +51,10 @@
     "message": "Verzeichnis",
     "description": "Verzeichnis"
   },
+  "extOther": {
+    "message": "Andere",
+    "description": "Andere"
+  },
   "extExtension":{
     "message": "Extensions",
     "description": "Erweiterungen"
